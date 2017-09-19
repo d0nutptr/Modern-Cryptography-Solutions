@@ -10,7 +10,7 @@
     
     **PREMISE**: 
     
-        Alice and Bob have agreed to use a "magic function" `f` with properties as specified in Property 1.1.    
+        Alice and Bob have agreed to use a "magic function" f with properties as specified in Property 1.1.    
         Additionally, a correct guess by Bob is to represent HEADS and an incorrect guess is TAILS.
         
     1. Alice picks a large, random integer `x` and computes `f(x)`.
@@ -51,3 +51,10 @@
     
         No, this function cannot be used for `f` in Prot 1.1 because it does not meet the requirements as stated by the premise.
         
+4) **Is an unbroken cryptographic algorithm more secure than a known broken one? If not, why?**
+
+    Generally, no, but it depends. Cryptographic algorithms can be broken to varying degrees so just because an algorithm has been "broken" doesn't mean it is useless or significantly worse off. In fact, due to the fact that the algorithm was broken, we know that it must have been investigated to some degree. Additionally, the degree in which the algorithm has been broken can be an indication to the underlying strength of the algorithm. However, sometimes a proof by reduction to contradiction can be done on unbroken crypto which allows some degree of confidence. 
+    
+5) **Complex systems are error-prone. Give an additional reason for a complex security system to be even more error-prone.**
+
+    There are plenty of answers that could be used here. One example could be that added complexity invites implementation errors.
