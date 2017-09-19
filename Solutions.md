@@ -101,11 +101,23 @@
 
     A principal can use a challenge-response pattern in their protocol using a nonce to ensure entity authentication. The initiating principal adds a nonce to their message. The responder ensures to add that nonce to their response while using message authentication to keep the integrity of the message. The initiator can then validate that the nonce returned is the one that was sent which will then ensure that the response was not resent from a previous communication.
     
-9) **For the perfect encryption notation !{}(https://latex.codecogs.com/gif.latex?%5C%7BM%5C%7D_K), differentiate the following three properties: (i) message confidentiality, (ii) key secrecy, and (iii) message authentication.**
+9) **For the perfect encryption notation ![](https://latex.codecogs.com/gif.latex?%5C%7BM%5C%7D_K), differentiate the following three properties: (i) message confidentiality, (ii) key secrecy, and (iii) message authentication.**
 
     1. **Message confidentiality**: This ensures that the message is incomprehensible by anyone without the encryption key. This protects the knowledge transmitted in the message.
     2. **Key Secrecy**: This ensures that the ciphertext does not leak information about the key used during encryption.
     3. **Message Authentication**: This ensures that the message does not get altered during transmission without detection. This prevent unseen and unauthorized modifications.
     
 10) **Provide another attack on Protocol "Session Key From Trent" (Prot 2.2), which allows Malice to masquerade not only as Bob toward Alice as in Attack 2.1, but at the same time also as Alice toward Bob, and hence Malice can relay "confidential" communications between Alice and Bob. Hint: run another instance of Attack 2.1 between Malice("Alice") and Bob.**
+
+    ![](https://github.com/d0nutptr/Modern-Cryptography-Solutions/blob/Chapter-2/2.10.PNG?raw=true)
+    
+1. Alice sends to Malice("Trent"): `Alice, Bob`
+2. Malice("Alice") sends to Trent: `Alice, Malice`
+3. Trent sends to Alice: ![](https://latex.codecogs.com/gif.latex?%5C%7BK_1%5C%7D_%7BAT%7D%2C%5C%20%5C%7BK_1%5C%7D_%7BMT%7D)
+4. Alice sends to Malice("Bob"): `Trent, Alice, `![](https://latex.codecogs.com/gif.latex?%5C%7BK_1%5C%7D_%7BMT%7D)
+5. Malice sends to Trent: `Malice, Bob`
+6. Trent sends to Malice: ![](https://latex.codecogs.com/gif.latex?%5C%7BK_2%5C%7D_%7BMT%7D%2C%5C%20%5C%7BK_2%5C%7D_%7BBT%7D)
+7. Malice("Alice") sends to Bob: `Trent, Alice, `![](https://latex.codecogs.com/gif.latex?%5C%7BK_2%5C%7D_%7BBT%7D)
+8. Bob sends to Malice("Alice"): ![](https://latex.codecogs.com/gif.latex?%5C%7B%5Ctext%7BHello%20Alice%2C%20I%27m%20Bob%21%7D%5C%7D_%7BK_2%7D)
+9. Malice decrypts the message from Bob using their shared cryptographic key and then reencrypts the message with Malice's and Alice's shared cryptographic key. Malice("Bob") then sends to Alice: ![](https://latex.codecogs.com/gif.latex?%5C%7B%5Ctext%7BHello%20Alice%2C%20I%27m%20Bob%21%7D%5C%7D_%7BK_1%7D)
 
