@@ -121,3 +121,21 @@
 8. Bob sends to Malice("Alice"): ![](https://latex.codecogs.com/gif.latex?%5C%7B%5Ctext%7BHello%20Alice%2C%20I%27m%20Bob%21%7D%5C%7D_%7BK_2%7D)
 9. Malice decrypts the message from Bob using their shared cryptographic key and then reencrypts the message with Malice's and Alice's shared cryptographic key. Malice("Bob") then sends to Alice: ![](https://latex.codecogs.com/gif.latex?%5C%7B%5Ctext%7BHello%20Alice%2C%20I%27m%20Bob%21%7D%5C%7D_%7BK_1%7D)
 
+11) **What is the difference between *Message Authentication* and *Entity Authentication*?**
+
+    * **Message Authentication** ensures that a message has not been altered since it has been sent out and then received.
+    * **Entity Authentication** ensures that a responder could only have crafted a particular message *after* receiving the intiating message to do so.
+    
+12) **Provide another attack on the Needham-Schroeder Authentication Protocol in which Alice (and Trent) stays offline completely.**
+
+    I, originally, found this question a bit confusing. I will provide my solution below that I believe Mao intended the user to respond with. 
+    
+    ![](https://github.com/d0nutptr/Modern-Cryptography-Solutions/blob/Chapter-2/2.12.PNG?raw=true)
+    
+1. Malice("Alice") sends to Bob ![](https://latex.codecogs.com/gif.latex?%5C%7BK%5E%7B%27%7D%2C%20%5Ctext%7BAlice%7D%5C%7D_%7BK_%7BBT%7D%7D)
+2. Bob decrypts the message. He then checks Alice's ID and sends to Malice("Alice") ![](https://latex.codecogs.com/gif.latex?%5C%7B%5Ctext%7BI%27m%20Bob%2C%20%7DN_B%5C%7D_K_%7B%27%7D)
+3. Malice("Alice") sends to Bob: ![](https://latex.codecogs.com/gif.latex?%5C%7B%5Ctext%7BI%27m%20Alice%21%2C%20%7DN_B%20-%201%5C%7D_K_%7B%27%7D)
+
+13) **Does digital signature play an important role in the Needham-Schroeder Public-key Authentication Protocol? Hint: consider that the protocol can be simplified to the version which only contains message lines 2, 6, 7.**
+
+    Yes. Otherwise Malice could modify the public keys being received and begin intercepting communications.
