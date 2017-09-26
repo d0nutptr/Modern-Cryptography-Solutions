@@ -109,7 +109,7 @@
     
 10) **Provide another attack on Protocol "Session Key From Trent" (Prot 2.2), which allows Malice to masquerade not only as Bob toward Alice as in Attack 2.1, but at the same time also as Alice toward Bob, and hence Malice can relay "confidential" communications between Alice and Bob. Hint: run another instance of Attack 2.1 between Malice("Alice") and Bob.**
 
-    ![](https://github.com/d0nutptr/Modern-Cryptography-Solutions/blob/Chapter-2/2.10.PNG?raw=true)
+    ![](https://github.com/d0nutptr/Modern-Cryptography-Solutions/blob/master/2.10.PNG?raw=true)
     
 1. Alice sends to Malice("Trent"): `Alice, Bob`
 2. Malice("Alice") sends to Trent: `Alice, Malice`
@@ -130,7 +130,7 @@
 
     I, originally, found this question a bit confusing. I will provide my solution below that I believe Mao intended the user to respond with. 
     
-    ![](https://github.com/d0nutptr/Modern-Cryptography-Solutions/blob/Chapter-2/2.12.PNG?raw=true)
+    ![](https://github.com/d0nutptr/Modern-Cryptography-Solutions/blob/master/2.12.PNG?raw=true)
     
 1. Malice("Alice") sends to Bob ![](https://latex.codecogs.com/gif.latex?%5C%7BK%5E%7B%27%7D%2C%20%5Ctext%7BAlice%7D%5C%7D_%7BK_%7BBT%7D%7D)
 2. Bob decrypts the message. He then checks Alice's ID and sends to Malice("Alice") ![](https://latex.codecogs.com/gif.latex?%5C%7B%5Ctext%7BI%27m%20Bob%2C%20%7DN_B%5C%7D_K_%7B%27%7D)
