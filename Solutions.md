@@ -139,3 +139,57 @@
 13) **Does digital signature play an important role in the Needham-Schroeder Public-key Authentication Protocol? Hint: consider that the protocol can be simplified to the version which only contains message lines 2, 6, 7.**
 
     Yes. Otherwise Malice could modify the public keys being received and begin intercepting communications.
+
+## Chapter 3
+1) **Throw two dice one after the other. Find the probability of the following events: **
+    
+    1. **sum is 7, 1, and less than or equal to 12;**
+    
+        For this question, we'll assume that the author intended these to be 3 separate prompts, otherwise it would be simple to prove the probability as 0 since the sum of two dice can't be both 7 and 1. 
+        
+        1. ***Sum is 7***
+        
+        ![](https://latex.codecogs.com/gif.latex?E%20%3D%20%5Cleft%5C%7B%281%2C%206%29%2C%20%282%2C%205%29%2C%20%283%2C%204%29%2C%20%284%2C%203%29%2C%20%285%2C%202%29%2C%20%286%2C%201%29%5Cright%5C%7D)
+        
+        Since each roll of a pair of dice is mutually exclusive to any other roll of a pair of dice, the probability is defined by definition 3.1
+        
+        ![](https://latex.codecogs.com/gif.latex?Prob%5BE%5D%20%3D%20%5Cfrac%7B6%7D%7B36%7D%20%3D%20%5Cfrac%7B1%7D%7B6%7D)
+            
+        2. ***Sum is 1***
+        
+        ![](https://latex.codecogs.com/gif.latex?E%20%3D%20%5Cemptyset)
+        
+        Since each roll of a pair of dice is mutually exclusive to any other roll of a pair of dice, the probability is defined by definition 3.1
+        
+        ![](https://latex.codecogs.com/gif.latex?Prob%5BE%5D%20%3D%20%5Cfrac%7B0%7D%7B36%7D%20%3D%200)
+        
+        3. ***Sum is less than or equal to 12***:
+        
+        ![](https://latex.codecogs.com/gif.latex?Prob%5BE%5D%20%3D%20%5Csum_%7Bi%20%3D%200%7D%5E%7B12%7D%20Prob%5BE_i%5D)
+        
+        ![](https://latex.codecogs.com/gif.latex?%5Cnewline%20Prob%5BE_0%5D%20%3D%20%5Cemptyset%20%5Cnewline%20Prob%5BE_1%5D%20%3D%20%5Cemptyset%20%5Cnewline%20Prob%5BE_2%5D%20%3D%20%5Cleft%5C%7B%281%2C%201%29%5Cright%5C%7D%20%5Cnewline%20Prob%5BE_3%5D%20%3D%20%5Cleft%5C%7B%281%2C%202%29%2C%20%282%2C%201%29%5Cright%5C%7D%20%5Cnewline%20%5Cvdots%20%5Cnewline%20Prob%5BE_%7B12%7D%5D%20%3D%20%5Cleft%5C%7B%286%2C%206%29%5Cright%5C%7D)
+        
+        We know that ![](https://latex.codecogs.com/gif.latex?%5Cbigcup_%7Bi%20%3D%201%7D%5E%7Bn%7D%20E_i%20%3D%20%5Cmathbb%7BS%7D) and ![](https://latex.codecogs.com/gif.latex?E_i%20%5Ccap%20E_j%20%3D%20%5Cmathbb%7BO%7D%20%5Ctext%7B%20%7D%20%28i%20%5Cneq%20j%29) therefore we can conclude:
+        
+        ![](https://latex.codecogs.com/gif.latex?Prob%5BE%5D%20%3D%20%5Csum_%7Bi%20%3D%201%7D%5E%7Bn%7D%20Prob%5BE_i%5D%20%3D%201)
+        
+    2. **second die < first die;**
+    
+        Let ![](https://latex.codecogs.com/gif.latex?F_i) represent the event that the first die is equal to `i`.
+        
+        ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20Prob%5B%5Ctext%7BSecond%20die%20is%20less%20than%20first%7D%5D%20%3D%20%5Csum_%7Bi%20%3D%201%7D%5E%7B6%7D%20Prob%5B%5Ctext%7BSecond%20die%20is%20less%20than%20first%7D%20%7C%20F_i%5D%20*%20Prob%5BF_i%5D)
+        
+        We know that ![](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B120%7D%20Prob%5BF_i%5D) should be ![](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cfrac%7B1%7D%7B6%7D) for any given `i` assuming that these are fair dice.
+        
+        ![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B6%7D%20%5Csum_%7Bi%20%3D%201%7D%5E%7B6%7D%20Prob%5BSecond%20...%20first%20%7C%20F_i%5D)
+        
+        ![](https://latex.codecogs.com/gif.latex?%5Cnewline%20Prob%5B%5Ctext%7BSecond%20...%20first%7D%20%7C%201%5D%20%3D%200%20%5Cnewline%20Prob%5B%5Ctext%7BSecond%20...%20first%7D%20%7C%202%5D%20%3D%20%5Cfrac%7B1%7D%7B6%7D%20%5Cnewline%20Prob%5B%5Ctext%7BSecond%20...%20first%7D%20%7C%203%5D%20%3D%20%5Cfrac%7B2%7D%7B6%7D%20%5Cnewline%20%5Cvdots%20%5Cnewline%20Prob%5B%5Ctext%7BSecond%20...%20first%7D%20%7C%206%5D%20%3D%20%5Cfrac%7B5%7D%7B6%7D)
+        
+        ![](https://latex.codecogs.com/gif.latex?Prob%5B%5Ctext%7BSecond%20...%20first%7D%5D%20%3D%20%5Cfrac%7B1%7D%7B36%7D%20%5Csum_%7Bi%20%3D%201%7D%5E%7B6%7D%28i%20-%201%29%20%3D%20%5Cfrac%7B15%7D%7B36%7D)
+        
+    3. **at least one die is 6;**
+    
+        Some text here
+    4. **given that the first die is 6, the second die is 6.**
+    
+        Some text here
