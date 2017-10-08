@@ -189,7 +189,30 @@
         
     3. **at least one die is 6;**
     
-        Some text here
+        We can use binomials here since we are basically asking what's the probability of getting 6 in 2 rolls.
+        
+        Probability of getting one 6 in a roll:
+        ![](https://latex.codecogs.com/gif.latex?b%281%3B%202%3B%20%5Cfrac%7B1%7D%7B6%7D%29%20%3D%20%5Cbinom%7B2%7D%7B1%7D%28%5Cfrac%7B1%7D%7B6%7D%29%281%20-%20%5Cfrac%7B1%7D%7B6%7D%29%20%3D%20%5Cfrac%7B2%7D%7B1%7D*%5Cfrac%7B5%7D%7B36%7D%20%3D%20%5Cfrac%7B10%7D%7B36%7D)
+        
+        Probability of getting two 6's in a roll:
+        ![](https://latex.codecogs.com/gif.latex?b%282%3B%202%3B%20%5Cfrac%7B1%7D%7B6%7D%29%20%3D%20%5Cbinom%7B2%7D%7B2%7D%28%5Cfrac%7B1%7D%7B6%7D%29%5E2%20%3D%20%5Cfrac%7B1%7D%7B36%7D)
+        
+        Therefore if we add the probabilities of these two events together we should get the probability of at least 1 die being a 6. ![](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cfrac%7B10%7D%7B36%7D%20&plus;%20%5Cfrac%7B1%7D%7B36%7D%20%3D%20%5Cfrac%7B11%7D%7B36%7D)
+        
     4. **given that the first die is 6, the second die is 6.**
     
-        Some text here
+        ![](https://latex.codecogs.com/gif.latex?%5Cinline%20Prob%5B%5Ctext%7BSecond%20die%20is%206%7D%20%7C%20%5Ctext%7BFirst%20die%20is%206%7D%5D%20%3D%20%5Cfrac%7BProb%5B%5Ctext%7BBoth%20are%206%7D%5D%7D%7BProb%5B%5Ctext%7BFirst%20die%20is%206%7D%5D%7D%20%3D%20%5Cfrac%7B%5Cfrac%7B1%7D%7B36%7D%7D%7B%5Cfrac%7B1%7D%7B6%7D%7D%20%3D%20%5Cfrac%7B1%7D%7B6%7D)
+        
+2) **In the preceding problem, find the probability that the first die is 3 given that the sum is greater or equal to 8.**:
+
+    ![](https://latex.codecogs.com/gif.latex?%5Cnewline%20Prob%5B%5Ctext%7BFirst%20die%20is%203%7D%20%7C%20%5Ctext%7BSum%20of%20dice%20is%208%7D%5D%20%3D%20%5Cnewline%20%5Cnewline%20%5Cfrac%7BProb%5B%5Ctext%7BFirst%20die%20is%203%7D%5Ccap%5Ctext%7BSum%20of%20dice%20is%208%7D%5D%7D%7BProb%5B%5Ctext%7BSum%20of%20dice%20is%208%7D%5D%7D)
+    
+    We can find the individual probabilities now.
+    
+    ![](https://latex.codecogs.com/gif.latex?Prob%5B%5Ctext%7BSum%20of%20dice%20is%208%7D%5D%20%3D%20%5Cfrac%7B%5C%23%5Cleft%5C%7B%282%2C%206%29%2C%20%283%2C%205%29%2C%20%284%2C%204%29%2C%20%285%2C%203%29%2C%20%286%2C%202%29%5Cright%5C%7D%7D%7B%5C%23%5Cmathbb%7BS%7D%7D)
+    
+    ![](https://latex.codecogs.com/gif.latex?Prob%5B%5Ctext%7BFirst%20die%20is%203%7D%5Ccap%5Ctext%7BSum%20of%20dice%20is%208%7D%5D%20%3D%20%5Cfrac%7B%5C%23%5Cleft%5C%7B%283%2C%205%29%5Cright%5C%7D%7D%7B%5C%23%5Cmathbb%7BS%7D%7D)
+    
+    ![](https://latex.codecogs.com/gif.latex?%5Cfrac%7BProb%5B%5Ctext%7BFirst%20die%20is%203%7D%5Ccap%5Ctext%7BSum%20of%20dice%20is%208%7D%5D%7D%7BProb%5B%5Ctext%7BSum%20of%20dice%20is%208%7D%5D%7D%20%3D%20%5Cfrac%7B%5Cfrac%7B1%7D%7B36%7D%7D%7B%5Cfrac%7B5%7D%7B36%7D%7D%20%3D%20%5Cfrac%7B1%7D%7B5%7D)
+    
+
