@@ -141,7 +141,7 @@
     Yes. Otherwise Malice could modify the public keys being received and begin intercepting communications.
 
 ## Chapter 3
-1) **Throw two dice one after the other. Find the probability of the following events: **
+1) **Throw two dice one after the other. Find the probability of the following events**:
     
     1. **sum is 7, 1, and less than or equal to 12;**
     
